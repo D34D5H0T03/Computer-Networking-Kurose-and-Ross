@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Basit's Server | Welcome</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- PrismJS Theme (Tomorrow Night for Dark Mode) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+        .glass-panel {
+            background: rgba(31, 41, 55, 0.6); /* gray-800 with opacity */
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-text {
+            text-shadow: 0 0 25px rgba(99, 102, 241, 0.5); /* Indigo glow */
+        }
+        /* Overriding some Prism defaults for better integration */
+        pre[class*="language-"] {
+            margin: 0 !important;
+            border-radius: 0 0 0.75rem 0.75rem !important;
+            background: #1d1f27 !important;
+        }
+        code[class*="language-"], pre[class*="language-"] {
+            font-family: 'Fira Code', monospace !important;
+            font-size: 0.875rem !important;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-300 min-h-screen p-6 sm:p-12 antialiased selection:bg-indigo-500/30">
+
+    <main class="w-full max-w-5xl mx-auto space-y-12">
+        <header class="text-center space-y-6 mt-8 mb-16">
+            <div class="inline-block bg-indigo-500/10 text-indigo-400 px-5 py-2 rounded-full text-sm font-semibold tracking-wide border border-indigo-500/20 code-font shadow-[0_0_15px_rgba(99,102,241,0.2)]">
+                200 OK — Connection Established
+            </div>
+            
+            <h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white tracking-tight glow-text">
+                Hi from <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Abdul Basit</span> 👋
+            </h1>
+            
+            <p class="text-xl sm:text-2xl max-w-2xl mx-auto text-gray-400">
+                Welcome to my custom Python Socket Server.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Kurose and Ross Card -->
+            <section class="glass-panel p-8 rounded-2xl shadow-xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center mb-5 space-x-3">
+                    <div class="p-3 bg-indigo-500/10 rounded-lg">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-semibold text-gray-100">The Inspiration</h2>
+                </div>
+                <p class="leading-relaxed mb-4 text-gray-400">
+                    This server was built from scratch as a practical implementation exercise, inspired by the classic networking textbook:
+                </p>
+                <blockquote class="border-l-4 border-indigo-500 pl-4 py-2 my-4 bg-indigo-900/20 rounded-r-lg italic text-gray-300">
+                    "Computer Networking: A Top-Down Approach" <br>
+                    <span class="text-sm text-gray-500 not-italic block mt-1">— James F. Kurose & Keith W. Ross</span>
+                </blockquote>
+                <p class="leading-relaxed text-sm text-gray-400">
+                    By bypassing high-level web frameworks, this project allowed me to dive deep into the Transport and Application layers, manually handling TCP handshakes, parsing HTTP GET requests, and crafting raw HTTP responses.
+                </p>
+            </section>
+
+            <!-- Sockets Explanation Card -->
+            <section class="glass-panel p-8 rounded-2xl shadow-xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="flex items-center mb-5 space-x-3">
+                    <div class="p-3 bg-purple-500/10 rounded-lg">
+                        <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-2xl font-semibold text-gray-100">How Sockets Work</h2>
+                </div>
+                <p class="leading-relaxed mb-4 text-gray-400">
+                    At its core, this server relies on <strong>Sockets</strong>. A socket acts as an endpoint for a two-way communication link between programs running on a network.
+                </p>
+                <ul class="space-y-3 text-sm text-gray-400 mb-4 list-disc list-inside">
+                    <li><strong class="text-gray-200">Bind & Listen:</strong> The server binds to a specific IP and Port (like 8080) and listens for incoming traffic.</li>
+                    <li><strong class="text-gray-200">Accept:</strong> When your browser requests this page, a TCP handshake occurs, and the server <em>accepts</em> the connection.</li>
+                    <li><strong class="text-gray-200">Receive & Send:</strong> The server reads the raw bytes of the HTTP request, determines what file is needed, and sends the raw HTML file back over the wire.</li>
+                </ul>
+            </section>
+        </div>
+
+        <section class="mt-12 w-full">
+            <h2 class="text-3xl font-bold text-white mb-6 flex items-center">
+                <svg class="w-8 h-8 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                </svg>
+                Under the Hood: Server Mechanics
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-[#1d1f27] border border-gray-700/50 p-6 rounded-xl shadow-lg relative overflow-hidden transition-all hover:border-blue-500/50">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-blue-500"></div>
+                    <h3 class="text-lg font-semibold text-blue-400 mb-3 font-mono tracking-tight">01. Socket Setup</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The server establishes a TCP connection (<code class="text-gray-300 bg-gray-800 px-1 py-0.5 rounded text-xs">SOCK_STREAM</code>), binds to port 8080, and enables immediate port reuse. This allows the server to restart cleanly without waiting for the operating system to release the network port.
+                    </p>
+                </div>
+
+                <div class="bg-[#1d1f27] border border-gray-700/50 p-6 rounded-xl shadow-lg relative overflow-hidden transition-all hover:border-indigo-500/50">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-indigo-500"></div>
+                    <h3 class="text-lg font-semibold text-indigo-400 mb-3 font-mono tracking-tight">02. Request Parsing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Upon receiving a connection, it reads raw HTTP request bytes. It splits the headers from the body, extracts the requested path from the initial line, and determines the target filename (defaulting to <code class="text-gray-300 bg-gray-800 px-1 py-0.5 rounded text-xs">index.html</code>).
+                    </p>
+                </div>
+
+                <div class="bg-[#1d1f27] border border-gray-700/50 p-6 rounded-xl shadow-lg relative overflow-hidden transition-all hover:border-purple-500/50">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
+                    <h3 class="text-lg font-semibold text-purple-400 mb-3 font-mono tracking-tight">03. Response Crafting</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The logic fetches the requested file from disk. If found, it builds an <code class="text-green-400 bg-gray-800 px-1 py-0.5 rounded text-xs">HTTP/1.1 200 OK</code> response with headers like <code class="text-gray-300 bg-gray-800 px-1 py-0.5 rounded text-xs">Content-Length</code>. If the file is missing, it gracefully crafts a <code class="text-red-400 bg-gray-800 px-1 py-0.5 rounded text-xs">404 Not Found</code> response.
+                    </p>
+                </div>
+
+                <div class="bg-[#1d1f27] border border-gray-700/50 p-6 rounded-xl shadow-lg relative overflow-hidden transition-all hover:border-pink-500/50">
+                    <div class="absolute top-0 left-0 w-1 h-full bg-pink-500"></div>
+                    <h3 class="text-lg font-semibold text-pink-400 mb-3 font-mono tracking-tight">04. Connection Loop</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Wrapped in a continuous loop, the server constantly awaits new traffic. It accepts the TCP handshake, receives the incoming data, sends the fully crafted HTTP response over the wire, and cleanly closes the client socket.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-20 text-center text-sm text-gray-500 pt-8 pb-4">
+            <p>Served locally via Custom Python TCP Server &bull; Created by Abdul Basit</p>
+        </footer>
+    </main>
+
+    <!-- PrismJS Scripts for Syntax Highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+</html>
